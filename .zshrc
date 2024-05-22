@@ -86,43 +86,12 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
+source $HOME/aliases.sh
+
 #
-# Example aliases
-
-# font book
-alias fontbook="open -b com.apple.FontBook"
-
-# basic
-alias cls="clear"
-
-# cd aliases
-alias home="cd ~"
-alias cd..="cd .."
-alias ..="cd .."
-
-# edit/check gradebook
-# alias egbk="code ~/src/gradebook_py/data/data.yaml"
-alias gbk="python3 ~/src/gradebook_py/main.py -f ~/src/gradebook_py/data/data.yaml"
-
-# quickly ssh into odin and vcf nodes (for uga systems programming)
-source .uga_id
-alias odin="ssh $UGA_ID@odin.cs.uga.edu"
-alias vcf0="ssh $UGA_ID@vcf0.cs.uga.edu"
-alias vcf1="ssh $UGA_ID@vcf1.cs.uga.edu"
-alias vcf2="ssh $UGA_ID@vcf2.cs.uga.edu"
-alias vcf3="ssh $UGA_ID@vcf3.cs.uga.edu"
-
-# basic aliases (https://news.ycombinator.com/item?id=9869231)
-alias o="open"
-alias x="exit"
-alias g="git"
-alias gs="git status"
-alias gd="git diff"
-alias g-="git checkout -"
-alias mem="top -l1 | grep PhysMem"
-
-# alias to create a new venv and install the requirements
-alias venv="python -m venv ./.venv && source ./bin/activate && [ ! -f ./requirements.txt ] || pip install -r requirements.txt"
+# path stuff
+#
 
 # path
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
