@@ -93,8 +93,13 @@ source $HOME/aliases.sh
 # path stuff
 #
 
-# path
+# random shell scripts
+export PATH=$PATH:$HOME/scripts/shell
+
+# openssl
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
+
+# python 3.12
 export PATH=$PATH:/opt/homebrew/opt/python@3.12/libexec/bin
 
 # pnpm
@@ -104,9 +109,10 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
 # bun completions
 [ -s "/Users/early/.bun/_bun" ] && source "/Users/early/.bun/_bun"
 
-# bun
+# more bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
